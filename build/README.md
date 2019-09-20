@@ -1,4 +1,4 @@
-# A GitHub Action For Just Building Jekyll Sites
+# A GitHub Action for just building Jekyll web sites
 
 We're only building the site here. If you want to do some other stuff with those
 site files like deploying them, or running some build scripts on them—you'll 
