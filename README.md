@@ -6,6 +6,10 @@ We're only building the site here. If you want to do some other stuff with those
 site files like deploying them, or running some build scripts on them—you'll 
 have to connect up some other actions to your workflow.
 
+## Inputs
+
+- `destination_dir`: Optional. Jekyll destination directory. Default: `./_site`.
+
 ## Secrets
 
 None needed.
@@ -23,7 +27,7 @@ jobs:
       with:
         ref: master
     - name: Run Jekyll
-      uses: faph/action-jekyll-2/@v1.1
+      uses: faph/action-jekyll-2/@v1.2
 ```
 
 Clones the repo and builds the site—that's it.
@@ -31,7 +35,6 @@ Clones the repo and builds the site—that's it.
 ## Caveats
 
 * Needs a Gemfile in the working directory.
-* `destination:` should be set to `./build` in your _config.yml file—as God demands.
 * Be sure that any custom gems needed are included in your Gemfile.
 
 
