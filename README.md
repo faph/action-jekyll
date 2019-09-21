@@ -21,7 +21,7 @@ jobs:
       with:
         ref: master
     - name: Run Jekyll
-      uses: faph/action-jekyll-2/build@master
+      uses: faph/action-jekyll-2/@v1.0
 ```
 
 Clones the repo and builds the site—that's it.
