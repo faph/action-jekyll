@@ -1,0 +1,16 @@
+name: Build Docker container
+on: 
+- push
+
+jobs:
+  build:
+    name: Build container
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Docker build
+      run: |
+        docker build . --file Dockerfile --tag "${GITHUB_REPOSITORY}"
+        docker images
+        docker history "${GITHUB_REPOSITORY}"
