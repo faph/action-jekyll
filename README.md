@@ -8,7 +8,8 @@ have to connect up some other actions to your workflow.
 
 ## Inputs
 
-- `destination_dir`: Optional. Jekyll destination directory. Default: `./_site`.
+- `destination_dir`: Optional. Jekyll destination directory. Default: `_site`, 
+  directory within the checked out repository.
 
 ## Secrets
 

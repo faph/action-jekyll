@@ -7,4 +7,4 @@ inputs:
   destination_dir:
     description: Jekyll build/destination directory
     required: false
-    default: ./_site
+    default: _site
