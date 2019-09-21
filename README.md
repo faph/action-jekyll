@@ -1,35 +1,33 @@
-# A GitHub Action for Custom Jekyll Builds on GitHub Pages
+# A GitHub Action for just building Jekyll web sites
 
-A GitHub Action for building and deploying a Jekyll repo back to its `gh-pages` branch. 
-
-**Why not just let GitHub Pages build it? Becaues this way we can use our own custom Jekyll plugins and build scripts.**
+We're only building the site here. If you want to do some other stuff with those
+site files like deploying them, or running some build scripts on them—you'll 
+have to connect up some other actions to your workflow.
 
 ## Secrets
-* `GITHUB_TOKEN`: Access key scoped to the repository, we need this to push the site files back to the repo. (specify in workflow)
-  
-## Environment Variables
-* `GITHUB_ACTOR`: Username of repo owner or object intiating the action (GitHub Provides)
-* `GITHUB_REPO`: Owner/Repository (GitHub Provides)
+
+None needed.
 
 ## Examples
 
-```hcl
-workflow "Deploy Site" {
-  on = "push"
-  resolves = ["Build and Deploy Jekyll"]
-}
-
-action "Build and Deploy Jekyll" {
-  uses = "BryanSchuetz/jekyll-deploy-gh-pages@master"
-  secrets = ["GITHUB_TOKEN"]
-}
+```yaml
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+      with:
+        ref: master
+    - name: Run Jekyll
+      uses: faph/action-jekyll-2/build@master
 ```
 
-Clones the repo, builds the site, and commits it back to the gh-pages branch of the repository.
+Clones the repo and builds the site—that's it.
 
 ## Caveats
 
-* Needs a .gemfile
+* Needs a Gemfile in the working directory.
 * `destination:` should be set to `./build` in your _config.yml file—as God demands.
 * Be sure that any custom gems needed are included in your Gemfile.
-* If you're looking to seperate out the build/deploy steps of this action so you can throw your own actions in between them, look at the limited build and deploy actions in this rpo.
