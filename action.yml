@@ -1,0 +1,5 @@
+name: Jekyll Build
+description: A GitHub Action for just building Jekyll web sites (no deployment)
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
