@@ -1,4 +1,4 @@
-[![Docker Automated build](https://img.shields.io/docker/automated/faph/jekyll-action-2.svg?maxAge=2592000)](https://hub.docker.com/r/faph/jekyll-action-2/)
+[![Docker Automated build](https://img.shields.io/docker/cloud/build/faph/action-jekyll-2)](https://cloud.docker.com/repository/docker/faph/action-jekyll-2/)
 
 # A GitHub Action for just building Jekyll web sites
 
