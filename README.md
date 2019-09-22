@@ -6,14 +6,15 @@ We're only building the site here. If you want to do some other stuff with those
 site files like deploying them, or running some build scripts on them—you'll 
 have to connect up some other actions to your workflow.
 
+
 ## Inputs
 
 - `destination_dir`: Optional. Jekyll destination directory. Default: `_site`, 
   directory within the checked out repository.
+- `add_nojekyll_tag`: Optional. Whether to add a .nojekyll file to the 
+  destination directory to prevent GitHub building the website with Jekyll. 
+  Default: `true`.
 
-## Secrets
-
-None needed.
 
 ## Examples
 
@@ -32,6 +33,7 @@ jobs:
 ```
 
 Clones the repo and builds the site—that's it.
+
 
 ## Caveats
 
