@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Build parameters:"
 echo "INPUT_DESTINATION_DIR: ${INPUT_DESTINATION_DIR:=_site}"
 echo "INPUT_ADD_NOJEKYLL_TAG: ${ADD_NOJEKYLL_TAG:=true}"
