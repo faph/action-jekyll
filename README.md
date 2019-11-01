@@ -29,7 +29,7 @@ jobs:
       with:
         ref: master
     - name: Run Jekyll
-      uses: docker://faph/action-jekyll-2:1.5
+      uses: docker://faph/action-jekyll:1.5
 ```
 
 Clones the repo and builds the site—that's it.
