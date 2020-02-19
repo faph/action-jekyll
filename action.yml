@@ -8,6 +8,10 @@ inputs:
     description: Jekyll build/destination directory
     required: false
     default: _site
+  source_dir:
+    description: Jekyll source directory
+    required: false
+    default: ./
   add_nojekyll_tag:
     description: Whether to add a .nojekyll file to the destination directory
     required: false
